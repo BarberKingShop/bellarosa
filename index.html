@@ -20,6 +20,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }a {
+            color: #ffa600;
+             text-decoration:none; 
+        }a:hover{
+            color:#ffa600; 
+             text-decoration:none; 
+            
         }.containerr{
     width: 112px;
     height: 112px;
@@ -245,18 +252,14 @@
     }
 }#main{
             width: 100vw;
-            height: 100vh;
+            height: calc(100vh - 50px);
             position: relative;
             display: flex;
             justify-content: space-between;
             align-items: end;
             padding: 1vh 2vw;
         }#logo{
-            position: absolute;
-            top: 2vh;
-            height: 6vh;
-            left: 50%;
-            transform: translate(-50%, 0%);
+         height: 80px;
 
         }#side-bar{
             width: 15vw;
@@ -418,7 +421,7 @@
   
 
 
-        <img src="images/logo.webp" id="logo">
+        
         <div id="side-bar">
             <span></span>
             <div id="coffe" class="selected items" style="background-image: url('images/special.webp') ; border-color: white;"></div>
@@ -445,8 +448,11 @@
         </div>
 
         <div id="menu">
+            <div style="width: 100%; display: flex; justify-content: center; align-items: start; height: 100px;">
+                <img src="images/logo.webp" id="logo">
+            </div>
             <div id="sugg">
-               
+                
                 <div id="coffe_container" style="display: flex; flex-direction: column; align-items: center;">
                     <div class="cover"  style="background-image: url('images/cofff.webp') ;"></div>
                     <h1 style="width: 100%; text-align: center; margin: 1rem auto;">Café</h1>
@@ -675,11 +681,13 @@
                 </div>
                 
             </div>
-        
-            
-              
         </div>
     </div>
+    <div style="background-color: rgb(73, 34, 34); height: 50px; width: 100vw; color: white; display: flex; justify-content: center; align-items: center; border-top: 1px solid white;">
+
+        <div>By <a href="#" class="link_a">Joezv</a> at <a href="https://joevev.github.io/mziouka-poly-service.github.io/" class="link_a">MzPolyservices</a> | ©2024</div>
+ 
+     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -689,11 +697,11 @@
                 $('.selected').removeClass('selected');
                 $('#coffe').addClass('selected');
                 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container, #mokhito_container, #juice_container, #burger_container, #breakfast_container, #plats_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container, #cocktail_container, #milkshake_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
                
             });
@@ -702,12 +710,12 @@
 
                 $('.selected').removeClass('selected');
                 $('#tea').addClass('selected');
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#mokhito_container, #juice_container, #burger_container, #breakfast_container, #plats_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container, #cocktail_container, #milkshake_container').css("display","none");
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
                 
 
@@ -717,12 +725,12 @@
                 $('.selected').removeClass('selected');
                 $('#drinks').addClass('selected');
 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #burger_container, #breakfast_container, #plats_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#mokhito_container, #juice_container, #cocktail_container, #milkshake_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
 
               
@@ -736,12 +744,12 @@
                 $('.selected').removeClass('selected');
                 $('#breakfast').addClass('selected');
 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #burger_container, #plats_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#breakfast_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
                
                 
@@ -753,12 +761,12 @@
                 $('.selected').removeClass('selected');
                 $('#plats').addClass('selected');
         
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #burger_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#plats_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             });
@@ -768,12 +776,12 @@
                 $('.selected').removeClass('selected');
                 $('#burgers').addClass('selected');
               
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#burger_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             });
@@ -783,12 +791,12 @@
                 $('.selected').removeClass('selected');
                 $('#tacos').addClass('selected');
              
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#tacos_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             })
@@ -798,12 +806,12 @@
                 $('.selected').removeClass('selected');
                 $('#sandwich').addClass('selected');
 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #tacos_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#sandwich_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             });
@@ -813,12 +821,12 @@
                 $('.selected').removeClass('selected');
                 $('#salades').addClass('selected');
 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #tacos_container, #sandwich_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#salade_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
                 
               
@@ -829,12 +837,12 @@
                 $('.selected').removeClass('selected');
                 $('#crepes').addClass('selected');
             
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #tacos_container, #sandwich_container, #salade_container, #dessert_container, #gaufre_container, #icecream_container').css("display","none");
                     $('#crepe_sucree_container, #crepe_salee_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             });
@@ -844,12 +852,12 @@
                 $('.selected').removeClass('selected');
                 $('#dessert').addClass('selected');
            
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #icecream_container').css("display","none");
                     $('#dessert_container, #gaufre_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
               
             });
@@ -859,23 +867,24 @@
                 $('.selected').removeClass('selected');
                 $('#glaces').addClass('selected');
                 
-                $('#menu').hide(400);
+                $('#sugg').hide(400);
                 
                 setTimeout(function() { 
                     $('#tea_container, #coffe_container,#ice_tea_container, #bubble_tea_container, #mokhito_container, #juice_container, #cocktail_container, #milkshake_container, #breakfast_container, #plats_container, #burger_container, #tacos_container, #sandwich_container, #salade_container, #crepe_sucree_container, #crepe_salee_container, #dessert_container, #gaufre_container').css("display","none");
                     $('#icecream_container').css("display","flex");
-                    $('#menu').show(600);
+                    $('#sugg').show(600);
                 }, 400);
             })
-        })
-
-        $( window ).on( "load", function() {
+            $( window ).on( "load", function() {
                 setTimeout(function() { 
                     $('#loader').fadeOut();
                     $('html').css('overflow','scroll');
                 }, 2000);
              
             });
+        })
+
+
             
         
        
